@@ -357,7 +357,7 @@ textarea.input {
 
 #top-header {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   background-color: #1E1F29;
 }
 
@@ -458,6 +458,7 @@ textarea.input {
   width: 90px;
   text-align: center;
   color: #FFF;
+  text-decoration: none;
 }
 
 .header-ctn>div>a>i {
@@ -581,6 +582,7 @@ textarea.input {
 
 .main-nav>li>a {
   padding: 20px 0px;
+  color:black
 }
 
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
