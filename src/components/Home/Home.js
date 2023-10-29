@@ -4,15 +4,12 @@ import '../../css/style.css'
 import '../../css/slick.css'
 import '../../css/slick-theme.css'
 import '../../css/nouislider.min.css'
-import '../../css/bootstrap.min.css'
+import '../../css/all.css'
 
 import Logo from '../../images/product01.png'
-
-import Carousels from "react-elastic-carousel";
-import Item from "../../Item";
 import NewProducts from './NewProducts'
 import TopSellingProducts from './TopSellingProducts'
-
+import Navbar from '../Authentication/Navbar'
 
 
 
@@ -28,25 +25,10 @@ const Home = () => {
 
 	return (
 		<>
-
-			<div id="top-header">
-				<div className="container">
-					<ul className="header-links pull-left">
-						<li className="cursor-on-text"><i className="fa fa-phone "></i>+91 9874266014</li>
-						<li className="cursor-on-text"><i className="fa fa-envelope-o"></i> email@email.com</li>
-						<li className="cursor-on-text"><i className="fa fa-map-marker"></i>India , Kolkata</li>
-					</ul>
-					<ul className="header-links pull-right">
-						<li className="cursor-on-text"><i className="fa fa-user-o"></i> My Account</li>
-						<li className="cursor-on-text"><i className="fa fa-dollar"></i>Logout</li>
-					</ul>
-				</div>
-			</div>
-
+			<Navbar />
+		
 			<div id="header">
-
 				<div className="container">
-
 					<div className="row">
 
 						<div className="col-md-3">
@@ -138,8 +120,6 @@ const Home = () => {
 				</div>
 
 			</div>
-
-
 			<nav id="navigation">
 				<div className="container">
 					<div id="responsive-nav">
@@ -158,9 +138,6 @@ const Home = () => {
 				</div>
 
 			</nav>
-
-
-
 			<div className="section">
 
 				<div className="container">
@@ -212,9 +189,6 @@ const Home = () => {
 				</div>
 
 			</div>
-
-
-
 			<div className="section">
 
 				<div className="container">
@@ -244,9 +218,6 @@ const Home = () => {
 				</div>
 
 			</div >
-
-
-
 			<div id="hot-deal" className="section">
 
 				<div className="container">
@@ -290,9 +261,6 @@ const Home = () => {
 				</div>
 
 			</div>
-
-
-
 			<div className="section">
 
 				<div className="container">
@@ -607,7 +575,7 @@ const Home = () => {
 			</div> */}
 
 
-{/* 
+			{/* 
 			<div id="newsletter" className="section">
 
 				<div className="container">
@@ -734,8 +702,6 @@ const Home = () => {
 				</div>
 
 			</footer>
-
-
 
 
 		</>
