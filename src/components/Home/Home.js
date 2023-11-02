@@ -25,7 +25,7 @@ const Home = () => {
 
 	return (
 		<>
-			<Navbar />
+
 		
 			<div id="header">
 				<div className="container">
