@@ -28,7 +28,7 @@ const Login = () => {
         },
         withCredentials: true
       }
-      const { data } = await axios.post(`http://localhost:8000/api/soummya/login`, json, config)
+      const { data } = await axios.post(`https://shopgo.onrender.com/api/soummya/login`, json, config)
       if(data.success){
         alert.success("Login Successfull")
         const profileData = data
