@@ -27,6 +27,8 @@ const Login = () => {
           'Content-Type': "application/json",
         },
         withCredentials: true
+
+        
       }
       const { data } = await axios.post(`https://shopgo.onrender.com/api/soummya/login`, json, config)
       if(data.success){
