@@ -55,7 +55,7 @@ const Signup = ({resgister,setRegister}) => {
                     withCredentials: true
                 }
     
-                await axios.post(`https://shopgo.onrender.com/api/soummya/register`, json, config).then((res) => {
+                await axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/api/soummya/register`, json, config).then((res) => {
                     if (res.status === 200) {
                         alert.success("Regitration Successfull")
                         setEnable(false)

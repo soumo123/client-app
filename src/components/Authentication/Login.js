@@ -13,7 +13,7 @@ const Login = () => {
   const [password, setPassword] = useState("")
 
 
-  const[resgister,setRegister]=useState(false)
+  const [resgister, setRegister] = useState(false)
   const [error, setError] = useState(false)
   const [error1, setError1] = useState(false)
 
@@ -38,11 +38,13 @@ const Login = () => {
           headers: {
             'Content-Type': "application/json",
           },
-          withCredentials: true
+          withCredentials: true,
+    
+
 
 
         }
-        const { data } = await axios.post(`https://shopgo.onrender.com/api/soummya/login`, json, config)
+        const { data } = await axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/api/soummya/login`, json, config)
         if (data.success) {
           alert.success("Login Successfull")
           const profileData = data
@@ -64,51 +66,51 @@ const Login = () => {
 
   return (
     <>
-    {
-      resgister ? (
-        <Signup resgister={resgister} setRegister={setRegister}/>
-      ):(
-        <div className="container1 order">
-        <div className="facebook-page order">
-          <div className="text">
-            <h1>Our Website Name</h1>
-            <p></p>
-            <p></p>
+      {
+        resgister ? (
+          <Signup resgister={resgister} setRegister={setRegister} />
+        ) : (
+          <div className="container1 order">
+            <div className="facebook-page order">
+              <div className="text">
+                <h1>Our Website Name</h1>
+                <p></p>
+                <p></p>
+              </div>
+              <form action="#" className="login-form">
+                <input type="email" placeholder="Email Id" value={email} onChange={(e) => { setEmail(e.target.value); setError(false) }} required />
+
+                {error && !email && (
+                  <span className="error-tag" style={{ color: 'red', textAlign: 'justify' }}>
+                    *Please Enter Email
+                  </span>
+                )}
+
+
+                <input type="password" placeholder="Password" value={password} onChange={(e) => { setPassword(e.target.value); setError1(false) }} required />
+
+
+                {error1 && !password && (
+                  <span className="error-tag" style={{ color: 'red', textAlign: 'justify' }}>
+                    *Please Enter Password
+                  </span>
+                )}
+
+                <div className="link">
+                  <button type="submit" className="login" onClick={loginSubmit}>Login</button>
+                  <Link to="/reset-password" className="forgot">Forgot password?</Link>
+                </div>
+                <hr />
+                <div className="button">
+                  <button className="btn btn-primary" onClick={(e) => setRegister(true)}>Create new account</button>
+                </div>
+              </form>
+            </div>
+
           </div>
-          <form action="#" className="login-form">
-            <input type="email" placeholder="Email Id"   value={email} onChange={(e) => { setEmail(e.target.value); setError(false) }} required />
 
-            {error && !email && (
-              <span className="error-tag" style={{ color: 'red', textAlign: 'justify' }}>
-                *Please Enter Email
-              </span>
-            )}
-
-
-            <input type="password" placeholder="Password"  value={password} onChange={(e) => { setPassword(e.target.value); setError1(false) }} required />
-
-
-            {error1 && !password && (
-              <span className="error-tag" style={{ color: 'red', textAlign: 'justify' }}>
-                *Please Enter Password
-              </span>
-            )}
-
-            <div className="link">
-              <button type="submit" className="login" onClick={loginSubmit}>Login</button>
-              <Link to="/reset-password" className="forgot">Forgot password?</Link>
-            </div>
-            <hr />
-            <div className="button">
-              <button className="btn btn-primary" onClick={(e)=>setRegister(true)}>Create new account</button>
-            </div>
-          </form>
-        </div>
-        
-      </div>
-
-      )
-    }
+        )
+      }
 
 
 
