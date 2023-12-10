@@ -1,33 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './components/Home/Home';
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './components/Authentication/Login';
-import Navbar from './components/Authentication/Navbar';
-import Signup from './components/Authentication/Signup';
+import Header from './components/Headers/Header';
+import TodayDeal from './components/Deals/TodayDeal';
+import Service from './components/Customer-service/Service';
+import SaleProducts from './components/Sales/SaleProducts';
+import Release from './components/New-release/Release';
+import Home from './components/Home/Home';
 
 function App() {
-  const userData = useSelector((state) => state.userDetails.user)
-
-  console.log("userDatauserData",userData)
-
-  console.log("env",process.env.REACT_APP_PRODUCTION_URL)
 
   return (
-    <BrowserRouter>
-			<Navbar />
-      <Routes>
-      <Route exact path="/" element={<Home/>} />
-      {userData===null &&  <Route exact path="/login" element={<Login />} />}
-      <Route exact path="/signup" element={<Signup/>} />
-      </Routes>
 
-      </BrowserRouter>
+
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+      <Route exact={true} path="/" element={<Home/>}/>
+        <Route exact={true} path="/today-deals" element={<TodayDeal/>}/>
+        <Route exact={true} path="/services" element={<Service/>}/>
+        <Route exact={true} path="/sales" element={<SaleProducts/>}/>
+        <Route exact={true} path="/new-releases" element={<Release/>}/>
+
+
+
+      </Routes>
+    </BrowserRouter>
+
+ 
    
   );
 }
 
-export default App;
+export default App

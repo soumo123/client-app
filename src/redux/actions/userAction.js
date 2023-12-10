@@ -7,9 +7,6 @@ export const fetchUserDetails = (userData) => {
     };
   };
 
-
-
-
   export const noteRefs = (e) =>{
     return {
       type: 'SET_REFRESH',

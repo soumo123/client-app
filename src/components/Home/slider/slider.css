@@ -1,0 +1,72 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+
+.homeSlider{
+
+    padding: 20px 0px;
+
+}
+
+.home_slider_Main{
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 47%;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background:rgb(235 235 235) !important;
+    z-index: 1000 !important;
+    transition: all 0.2s ease-in-out !important;
+    box-shadow: 0 3px 6px rgba(0 0 0 / 20%) !important
+}
+
+
+.slick-arrow.slick-next{
+    right: 2% !important;
+}
+.slick-arrow.slick-prev{
+    left: 2% !important;
+}
+.slick-next:before{
+    content: "\f105" !important;
+    font-family: FontAwesome !important; 
+    font-size: 30px;/* Correct the property name and include quotes */
+    color: #000000 !important;
+}
+
+.slick-prev:before {
+    content: "\f104" !important;
+   font-family: FontAwesome !important; /* Correct the property name and include quotes */
+   font-size: 30px;
+   color: #000000 !important;
+}
+
+
+.slick-arrow:hover{
+    background: rgb(130 151 135) !important;
+}
+
+.slick-arrow:hover::before{
+    color: rgb(255, 255, 255) !important;
+}
+
+.home_slider_Main .slick-dots{
+    position: absolute;
+    bottom: 30px !important;
+}
+
+.home_slider_Main .slick-dots button:before{
+    width: 10px !important;
+    height: 10px !important;
+    font-size: 17px !important;
+}
+
+.slick-active button:before{
+    color: rgb(255, 255, 255) !important;
+}

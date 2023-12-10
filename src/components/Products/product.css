@@ -1,0 +1,138 @@
+.productThumb {
+    width: 100%;
+    height: auto;
+    /* background: #ccc; */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.productThumb:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+}
+
+.productThumb .imageWrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.productThumb .imageWrapper img {
+    transition: all 0.3s ease-in-out;
+}
+
+.productThumb:hover .imageWrapper img {
+    transform: scale(1.1);
+}
+
+
+
+
+.bg-g {
+    background: #898931 !important;
+    color: white !important;
+}
+
+.productThumb .catName {
+    color: #000;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.productThumb .title {
+    margin: 10px 0px;
+}
+
+.productThumb .title a {
+    color: #000;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+    line-height: 22px;
+
+}
+
+.productThumb .days-color {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.productThumb .brand {
+    color: #000;
+    font-size: 18px;
+}
+
+.productThumb .price {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.productThumb .oldPrice {
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #000;
+    opacity: 0.6;
+
+}
+
+.productThumb button {
+    font-size: 20px !important;
+    color: #fff !important;
+    padding: 5px 25px !important;
+    text-transform: capitalize !important;
+    margin-left: 8px;
+
+
+}
+
+.productThumb button:hover {
+    background: #baba2d !important;
+    color: #fff !important;
+}
+
+.productThumb .imageWrapper .overlays {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productThumb .imageWrapper .overlays ul {
+    background: #fff;
+    width: 100px;
+    height: 40px;
+}
+
+.productThumb .badge {
+    position: absolute;
+    top: -25px;
+    left: -27px;
+    display: inline-block;
+    background: red;
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 5px;
+
+}
+
+.productThumb .whishlist-icon {
+
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    cursor: pointer;
+}
