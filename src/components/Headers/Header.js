@@ -22,12 +22,14 @@ import DialogTitle from '@mui/material/DialogTitle';
 import SignIn from '../../images/sign-in.jpg'
 import SignUp from '../../images/signup-image.jpg'
 import axios from 'axios'
-
 import ClearIcon from '@mui/icons-material/Clear';
+import {useSelector, useDispatch} from 'react-redux'
+import { fetchUserDetails } from '../../redux/actions/userAction';
 
 const Header = () => {
     const [isDropDownOpen, setISDropDownOpen] = useState(false)
     const headerRef = useRef()
+    const dispatch = useDispatch()
     const [open, setOpen] = React.useState(false);
     const [mode, setMode] = useState("1")
     const [email, setEmail] = useState("")
@@ -84,9 +86,10 @@ const Header = () => {
         const profileData = data
         localStorage.setItem("token", data.token)
         localStorage.setItem("profile", JSON.stringify(profileData))
+        dispatch(fetchUserDetails(data))
     }
 
-
+    
 
     useEffect(() => {
 

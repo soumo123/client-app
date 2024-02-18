@@ -8,6 +8,9 @@ import Service from './components/Customer-service/Service';
 import SaleProducts from './components/Sales/SaleProducts';
 import Release from './components/New-release/Release';
 import Home from './components/Home/Home';
+import Listing from './components/ProductListing/Listing';
+import Notefound from './components/Notefound/Notefound';
+import DetailsPage from './components/ProductListing/DetailsPage';
 
 function App() {
 
@@ -22,9 +25,14 @@ function App() {
         <Route exact={true} path="/services" element={<Service/>}/>
         <Route exact={true} path="/sales" element={<SaleProducts/>}/>
         <Route exact={true} path="/new-releases" element={<Release/>}/>
+        <Route exact={true} path="/listing" element={<Listing/>}/>
+        <Route exact={true} path="product/details" element={<DetailsPage/>}/>
 
 
+        <Route exact={true} path="*" element={<Notefound/>}/>
 
+
+    
       </Routes>
     </BrowserRouter>
 
